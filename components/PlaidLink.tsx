@@ -21,7 +21,7 @@ const PlaidLink = ({user, variant}: PlaidLinkProps) => {
   }, [user])
 
   const onSuccess = useCallback<PlaidLinkOnSuccess>(async (public_token: string) => {
-    await exchangePublicToken({
+      await exchangePublicToken({
       publicToken: public_token,
       user
     })
